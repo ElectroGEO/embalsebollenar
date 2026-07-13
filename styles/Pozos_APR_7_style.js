@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Puntos_Calidad_Agua_6 = function(feature, resolution){
+var style_Pozos_APR_7 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,7 +9,7 @@ var style_Puntos_Calidad_Agua_6 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "26.0px \'Franklin Gothic Demi\', sans-serif";
+    var labelFont = "19.5px \'Franklin Gothic Demi\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "#fafafa";
     var bufferWidth = 3.0;
@@ -19,18 +19,18 @@ var style_Puntos_Calidad_Agua_6 = function(feature, resolution){
     var overflow = false;
     var repeat = 0;
     var placement = 'point';
-    if (feature.get("ID") !== null) {
-        labelText = String(feature.get("ID"));
+    if (feature.get("NOMBRE") !== null) {
+        labelText = String(feature.get("NOMBRE"));
     }
     var style = [ new ol.style.Style({
-        image: new ol.style.Circle({radius: 9.2 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(231,111,71,1.0)'})}),
+        image: new ol.style.Circle({radius: 10.0 + size,
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.52}), fill: new ol.style.Fill({color: 'rgba(0,0,0,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
     }),new ol.style.Style({
         image: new ol.style.Circle({radius: 4.0 + size,
-            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(0,0,0,1.0)'})}),
+            displacement: [0, 0], stroke: new ol.style.Stroke({color: 'rgba(35,35,35,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0.0}), fill: new ol.style.Fill({color: 'rgba(255,255,255,1.0)'})}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth, textAlign, offsetX, offsetY, overflow, repeat)
